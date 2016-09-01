@@ -46,7 +46,7 @@ Defaults:
 | FROMPORT | 5984        |
 | FROMDB   | exampledb   |
 | TOHOST   | to.docker   |
-| TOPORT   | 5984{}      |
+| TOPORT   | 5984        |
 | TODB     | exampledb   |
 | NODUMP   | [ not set ] |
 | NOIMPORT | [ not set ] |
