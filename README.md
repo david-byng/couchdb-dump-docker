@@ -4,10 +4,11 @@ portability.
 
 ## How to use
 
-The default command is:
+The default commands are:
 
 ```
-/couchdb-dump/couchdb-backup.sh -b -f /dump/${FILENAME} -H ${FROMHOST} -P ${FROMPORT} -d ${FROMDB} && \
+/couchdb-dump/couchdb-backup.sh -b -f /dump/${FILENAME} -H ${FROMHOST} -P ${FROMPORT} -d ${FROMDB}
+
 /couchdb-dump/couchdb-backup.sh -r -f /dump/${FILENAME} -H ${TOHOST} -P ${TOPORT} -d ${TODB}
 ```
 
@@ -33,14 +34,19 @@ docker run \
     couchdb-dump-docker
 ```
 
+If you want to skip the dump or import parts, eg when running on isolated servers, set `NODUMP` or
+`NOIMPORT` to 1.
+
 Defaults:
 
-| Name | Default |
-| ---- | ------- |
-| FILENAME| dump.json |
+| Name     | Default     |
+| -------- | ----------- |
+| FILENAME | dump.json   |
 | FROMHOST | from.docker |
-| FROMPORT | 5984 |
-| FROMDB | exampledb |
-| TOHOST | to.docker |
-| TOPORT | 5984 |
-| TODB | exampledb |
+| FROMPORT | 5984        |
+| FROMDB   | exampledb   |
+| TOHOST   | to.docker   |
+| TOPORT   | 5984{}      |
+| TODB     | exampledb   |
+| NODUMP   | [ not set ] |
+| NOIMPORT | [ not set ] |
