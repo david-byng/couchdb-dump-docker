@@ -28,7 +28,7 @@ or
 ```
 docker run \
     --link existing_container:from.docker \
-    --link another_container:to.db \
+    --link another_container:to.docker \
     -e "FROMDB=foo" \
     -e "TODB=bar" \
     couchdb-dump-docker
