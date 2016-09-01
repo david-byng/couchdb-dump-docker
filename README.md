@@ -22,14 +22,25 @@ docker run \
     couchdb-dump-docker
 ```
 
+or
+
+```
+docker run \
+    --link existing_container:from.docker \
+    --link another_container:to.db \
+    -e "FROMDB=foo" \
+    -e "TODB=bar" \
+    couchdb-dump-docker
+```
+
 Defaults:
 
 | Name | Default |
 | ---- | ------- |
 | FILENAME| dump.json |
 | FROMHOST | from.docker |
-| FROMPORT | 80 |
+| FROMPORT | 5984 |
 | FROMDB | exampledb |
 | TOHOST | to.docker |
-| TOPORT | 80 |
+| TOPORT | 5984 |
 | TODB | exampledb |
